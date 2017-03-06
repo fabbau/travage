@@ -1,6 +1,6 @@
 import $ from 'jquery';
-import smoothScroll from 'jquery-smooth-scroll'
 import waypoints from '../../../../node_modules/waypoints/lib/noframework.waypoints';
+import smoothScroll from 'jquery-smooth-scroll'
 
 class StickyHeader {
 	constructor() {
@@ -12,7 +12,8 @@ class StickyHeader {
 		this.headerLinks = $('.primary-nav a');
 		this.createPageSectionWaypoints();
 		this.addSmoothScrolling();
-		this.refreshWaypoints();
+		//doesn't work, breaks the modal -> deactiaved
+		//this.refreshWaypoints(); //need to be called only once, than all waypaints are updated (e.g. those on RevealOnScroll.js)
 	}
 
 	refreshWaypoints() {
