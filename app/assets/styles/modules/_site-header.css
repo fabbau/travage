@@ -10,8 +10,13 @@
 	}
 
 	@mixin atMedium {
-			/* npm: postcss-hexrgba */
+		/* npm: postcss-hexrgba */
+		position: fixed;  /* fixed header */
 		background-color: rgba(47, 85, 114, 0.3);
+
+		&--dark {
+			background-color: rgba(23, 51, 73, .85);
+		}
 	}
 
 	&__btn-container {
@@ -24,6 +29,7 @@
 		position: absolute;
 		top: 0;
 		left: 50%;
+		transition: transform .3s ease-out;
 		transform: translateX(-50%) scale(.75);
 		transform-origin: 50% 0 ;
 		background-color: $mainBlue;
@@ -32,6 +38,10 @@
 		@mixin atMedium {
 			left: auto;
 			transform: translateX(0);
+
+			.site-header--dark & { /* & = slector for __logo element, targets the logo only when --dark is used -> shrink the logo when scrolling */
+				transform: scale(.57);
+			}
 		}
 	}
 
