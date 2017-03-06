@@ -13,11 +13,11 @@ class StickyHeader {
 		this.createPageSectionWaypoints();
 		this.addSmoothScrolling();
 		//doesn't work, breaks the modal -> deactiaved
-		//this.refreshWaypoints(); //need to be called only once, than all waypaints are updated (e.g. those on RevealOnScroll.js)
+		this.refreshWaypoints(); //need to be called only once, than all waypaints are updated (e.g. those on RevealOnScroll.js)
 	}
 
 	refreshWaypoints() {
-		this.lazyImages.load(function() {
+		this.lazyImages.on('load', function() {
 			Waypoint.refreshAll(); //refreshes all Waypoints (including this in RevealOnScroll.js)
 		});
 	}
