@@ -51,6 +51,10 @@
 			padding: 12px 0;
 			font-size: 1rem;
 			background-color: transparent;
+
+			&.is-current-link { /* only when it has the class ".is-current-link" (class set with jquery) */
+				color: #fabb69;
+			}
 		}
 	}
 }
