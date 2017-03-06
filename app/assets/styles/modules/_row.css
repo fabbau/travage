@@ -97,7 +97,7 @@
 	}
 
 	/* Begin Equal height rules */
-	&--equal-height-medium {
+	&--equal-height-medium { /* flexbox class for mordernizr */
 		@mixin atMedium {
 			display: flex;
 		}

@@ -40,7 +40,7 @@
 			transform: translateX(0);
 
 			.site-header--dark & { /* & = slector for __logo element, targets the logo only when --dark is used -> shrink the logo when scrolling */
-				transform: scale(.57);
+				transform: scale(.55);
 			}
 		}
 	}
