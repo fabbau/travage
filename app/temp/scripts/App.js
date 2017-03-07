@@ -11279,7 +11279,7 @@ var StickyHeader = function () {
 		this.headerLinks = (0, _jquery2.default)('.primary-nav a');
 		this.createPageSectionWaypoints();
 		this.addSmoothScrolling();
-		//doesn't work, breaks the modal -> deactiaved
+
 		this.refreshWaypoints(); //need to be called only once, than all waypaints are updated (e.g. those on RevealOnScroll.js)
 	}
 
